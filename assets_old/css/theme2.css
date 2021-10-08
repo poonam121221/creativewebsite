@@ -1,0 +1,103 @@
+body,
+.logo-wrapper,
+.minister,
+.block-item,
+.partners,
+.section-block,
+.plants,
+.events {
+    background: #222;
+    background-image: none;
+}
+
+.topbar,
+.headertxt,
+.cmname,
+.blocks,
+.block-item .icon,
+.footer,
+.cm {
+    background: #383838;
+}
+
+.topbar .navbar-nav .nav-link,
+body,
+.cm h4,
+.font-selection a,
+.blog-artical li a .title2,
+.event-bx li a,
+.imp-links li a,
+#navigation .navbar-nav>li>a {
+    color: #fff;
+}
+
+.block-item:after {
+    border-top-color: #222;
+}
+
+.topbar .navbar-nav .nav-link,
+.font-selection a,
+.cmname,
+.top-header {
+    border-color: #111;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#navigation,
+.section-header,
+.section-header.bg2,
+.section-header.bg3 {
+    background: #111;
+}
+
+.news {
+    background: #373737;
+}
+
+.sp1 {
+    border-color: transparent transparent #373737 #373737;
+}
+
+.sp2 {
+    border-color: transparent transparent #222 #222;
+}
+
+.section-icon,
+.blog-artical li a .date {
+    background: #ffc251;
+    color: #000;
+}
+
+.section-block {
+    box-shadow: none;
+}
+
+img {
+    filter: grayscale(1)
+}
+
+.cm img {
+    box-shadow: 0 0 0 4px #535353;
+    border-color: #6a6a6a;
+}
+
+.cm p {
+    color: #fff;
+}
+
+.btn,
+.btn-anim {
+    background: #ffc251!important;
+    color: #000!important;
+}
+
+.news:before,
+.news:after {
+    display: none;
+}
+
+.innerpage-block {background: #212121;}

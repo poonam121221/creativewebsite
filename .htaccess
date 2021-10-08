@@ -1,0 +1,43 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?/$1 [QSA,L]
+# disable directory browsing
+Options All -Indexes
+
+
+
+ErrorDocument 401 http://164.100.196.218/jalnigam/Errors/error_401
+ErrorDocument 403 http://164.100.196.218/jalnigam/Errors/error_403
+ErrorDocument 404 http://164.100.196.218/jalnigam/Errors/error_404_custom
+ErrorDocument 500 http://164.100.196.218/jalnigam/Errors/error_500
+ErrorDocument 503 http://164.100.196.218/jalnigam/Errors/error_503
+
+php_value upload_max_filesize 25M
+php_value post_max_size 25M
+php_value max_execution_time 800
+php_value max_input_time 800
+
+Header unset Server
+Header unset X-Powered-By
+
+RewriteCond %{QUERY_STRING} PHP[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} [NC]
+RewriteRule .* - [F]
+</IfModule>
+
+<ifModule mod_headers.c>
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK|PUT|OPTIONS|DELETE|HEAD)
+RewriteRule .*$ - [F]
+RewriteCond %{REQUEST_METHOD} ^TRACE
+RewriteRule .* – [F]
+
+#Header set Access-Control-Allow-Origin "http://164.100.196.218/epco"
+#Header add Access-Control-Allow-Headers "origin, x-requested-with, content-type"
+#Header add Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
+Header set X-XSS-Protection "1; mode=block"
+Header always append X-Frame-Options SAMEORIGIN
+Header set X-Content-Type-Options: "nosniff"
+AddType application/x-font-woff2 .woff2
+</ifModule>

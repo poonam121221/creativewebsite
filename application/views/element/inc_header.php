@@ -1,0 +1,1 @@
+<?php  $this->view('element/inc_nav'); ?>

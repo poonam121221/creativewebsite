@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+<Files *.php>
+deny from all
+</Files>
+
+# disable directory browsing
+Options All -Indexes
+</IfModule>

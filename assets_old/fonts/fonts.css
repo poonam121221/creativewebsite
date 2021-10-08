@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Vesper Libre';
+    src: url('VesperLibre-Heavy.eot');
+    src: url('VesperLibre-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('VesperLibre-Heavy.woff2') format('woff2'),
+        url('VesperLibre-Heavy.woff') format('woff'),
+        url('VesperLibre-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesper Libre';
+    src: url('VesperLibre-Medium.eot');
+    src: url('VesperLibre-Medium.eot?#iefix') format('embedded-opentype'),
+        url('VesperLibre-Medium.woff2') format('woff2'),
+        url('VesperLibre-Medium.woff') format('woff'),
+        url('VesperLibre-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesper Libre';
+    src: url('VesperLibre-Regular.eot');
+    src: url('VesperLibre-Regular.eot?#iefix') format('embedded-opentype'),
+        url('VesperLibre-Regular.woff2') format('woff2'),
+        url('VesperLibre-Regular.woff') format('woff'),
+        url('VesperLibre-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesper Libre';
+    src: url('VesperLibre-Bold.eot');
+    src: url('VesperLibre-Bold.eot?#iefix') format('embedded-opentype'),
+        url('VesperLibre-Bold.woff2') format('woff2'),
+        url('VesperLibre-Bold.woff') format('woff'),
+        url('VesperLibre-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rozha One';
+    src: url('RozhaOne-Regular.eot');
+    src: url('RozhaOne-Regular.eot?#iefix') format('embedded-opentype'),
+        url('RozhaOne-Regular.woff2') format('woff2'),
+        url('RozhaOne-Regular.woff') format('woff'),
+        url('RozhaOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
