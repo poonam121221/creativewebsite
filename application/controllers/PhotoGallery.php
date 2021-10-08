@@ -34,7 +34,7 @@ class PhotoGallery extends Frontend_Controller {
 		}
 		$filter = array('is_delete'=>0,'cat_status'=>1);
 		
-		$this->data['CategoryList'] = $this->GallerycategoryModel->GenerateDDList($this->__catTbl,'cat_id',$cat_title,$ddl_select_name,$filter);
+		$this->data['CategoryList'] = $this->GallerycategoryModel->GenerateDDList($this->__catTbl,'cat_id',$cat_title,'',$filter);
 		
 		$this->data['LastUpdatedDate'] = getLastUpdatedModule($this->__table);
 		$this->front_view('public/photo_gallery/index',$this->data);
@@ -58,7 +58,7 @@ class PhotoGallery extends Frontend_Controller {
         
         $filter  = array('cpgc.cat_status'=>1,'cpgc.is_delete'=>0);
         if($category_id!=0){
-		  $filter['cat_id']=$category_id;
+		  $filter['um.cat_id']=$category_id;
 		}       
         
         $orderBy = array('cpgc.cat_title_en'=>'asc');              
@@ -84,7 +84,7 @@ class PhotoGallery extends Frontend_Controller {
         //get posts data
         $this->data['DataList'] = $this->GallerycategoryModel->ajax_search_by_title($conditions,$filter,$orderBy);
         $this->data['PageNo'] = $offset;
-        
+       // echo $this->db->last_query(); exit();
         //load the view
         $this->load->view('public/photo_gallery/ajax_photo', $this->data, false);
         

@@ -3,6 +3,7 @@
 
 	
 	<?php 
+
 	
 	if(isset($DataList) && count($DataList)>0  && $DataList !=FALSE){
 	$i = (isset($ajaxPagination['s_no']))?$ajaxPagination['s_no']:1;
@@ -14,21 +15,27 @@
 		$ImagePath = base_url('uploads/gallery/').html_escape($row->attachment);
 	}		
 	?>	
-		<div class="col-md-4">
-			<div class="gallery-item">
-				<a  href="<?php echo base_url('photo-gallery-view/'.$enc_id); ?>" class="viewbtn" alt="<?php echo $row->title; ?>">
-				<div class="gallery-img">
-					<img src="<?php echo $ImagePath; ?>" alt="<?php echo $row->title; ?>">
-					<i class="mdi mdi-call-made"></i>
-				</div>
-				<div class="desp">
-					
-					<h5><?php echo $row->title; ?></h5>
-				</div>
-			</a>
+			<!-- Grid -->
+			<div class="row_items col-md-3">
+				<div class="product-layout product-grid">
+					<div class="product-thumb transition">
+						<div class="image">
+							<a href="<?php echo $ImagePath; ?>">
+								<img src="<?php echo $ImagePath; ?>"
+									alt="<?php echo $row->title; ?>"
+									title="<?php echo $row->title; ?>"
+									class="img-responsive" />
+							</a>
+						</div><!-- image -->
+						<div class="caption">
+							<h4 class="product-name"><?php echo $row->title; ?></h4>
+							<p class="price">&#x20B9; 100.00</p>
+						</div><!-- caption -->
+					</div><!-- product-thumb -->
+				</div><!-- product-layout -->
+
 			</div>
-		</div>
-	                      
+			<!-- Grid -->         
 	<?php 
 	   }
 	 }else{

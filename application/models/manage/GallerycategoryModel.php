@@ -56,13 +56,17 @@ class GallerycategoryModel extends MY_Model {
 
 			$column = "";
 			if(checkLanguage("english")){
-				$column = ",cpgc.cat_title_en as title";
+				$column = ",um.title_en as title";
 			}else{
-				$column = ",cpgc.cat_title_hi as title";
+				$column = ",um.title_hi as title";
 			}				
 			
-	        $this->db->select('cpgc.*'.$column.',(SELECT attachment FROM '.$params['table'].' as cp WHERE status=1 and is_delete=0 and cat_id =cpgc.cat_id ORDER BY order_preference asc LIMIT 1) as  attachment');
-	        $this->db->from($params['category_table'].' cpgc');
+			$this->db->select('um.cat_id,attachment'.$column);
+	        $this->db->from($params['table'].' um');
+			$this->db->join($params['category_table'].' cpgc', 'cpgc.cat_id = um.cat_id','left');
+
+	        // $this->db->select('cpgc.*'.$column.',(SELECT attachment FROM '.$params['table'].' as cp WHERE status=1 and is_delete=0 and cat_id =cpgc.cat_id ORDER BY order_preference asc LIMIT 1) as  attachment');
+	        // $this->db->from($params['category_table'].' cpgc');
 	        
 	        if(count($filter)>0){
 				$this->db->where($filter);
