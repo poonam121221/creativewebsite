@@ -1,19 +1,27 @@
-        <div id="information-information" class="container">
-            
-            <div class="row">
-                <div id="content" class="col-sm-12">
-                    <div id="cmsblock-24" class="cmsblock">
-                      <div class='description'>
-                          <div class="dynamic-about">
-                              <h1><?php echo (isset($DataList)) ? stripslashes2(html_entity_decode($DataList->title)) : ""; ?></h1>
-                              <img src="<?php echo base_url('assets/img/bg-title-aboutus.png'); ?>" alt="bg title">
-                              <p><?php echo (isset($DataList)) ? stripslashes2(html_entity_decode($DataList->description)) : ""; ?></p>
-                              <h4>Pallavi - <span>CEO <span></span></span></h4>
-                          </div>
-                      </div>
-                    </div>
-                </div>
-            </div>
+<div class="inner-banner has-base-color-overlay text-center" style="background: url(images/background/1.jpg);">
+    <div class="container">
+        <div class="box">
+            <h3><?php echo (isset($DataList)) ? stripslashes2(html_entity_decode($DataList->title)) : ""; ?></h3>
         </div>
+    </div>
+    <div class="breadcumb-wrapper">
+        <div class="container">
+            <div class="pull-left">
+                <ul class="list-inline link-list">
+                    <li>
+                        <a href="index.php">Home</a>
+                    </li>
+                    <li>
+                    <?php echo (isset($DataList)) ? stripslashes2(html_entity_decode($DataList->title)) : ""; ?>
+                    </li>
+                </ul>
+            </div>
+          
+        </div>
+    </div>
+</div>
 
-       <?php $this->view('element/inc_newsletter'); ?>
+<?php echo (isset($DataList)) ? stripslashes2(html_entity_decode($DataList->description)) : ""; ?>
+
+       
+<?php $this->view('element/inc_newsletter'); ?>

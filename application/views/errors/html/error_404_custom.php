@@ -31,5 +31,5 @@
     </div>
 </div>
 
-<?php $this->load->view('element/inc_footer_slider'); ?>
+<?php // $this->load->view('element/inc_footer_slider'); ?>
 

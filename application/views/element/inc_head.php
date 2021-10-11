@@ -26,26 +26,11 @@ echo meta($meta);
 <link rel="icon" href="<?php echo HTTP_IMAGES_PATH; ?>favicon.ico" type="image/x-icon">
 
 <?php echo put_headers(); ?>
-<link
-		href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,hebrew,latin-ext"
-		rel="stylesheet">
-	<link
-		href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&amp;subset=cyrillic,latin-ext,vietnamese"
-		rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
-	<link
-		href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&amp;subset=cyrillic,latin-ext"
-		rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,400i" rel="stylesheet">
+	
 </head>
 <?php 
-$nothomepage =  $this->uri->segment(1); 
-
-if($nothomepage){
-	echo '<body class="information-information-4 home4 group2">'.PHP_EOL;
-} else{
-	echo '<body class="common-home home4 group2">'.PHP_EOL; 
-}
-
-echo '<div class="wrapper">';
- ?>
+   echo '<body>'.PHP_EOL; 
+   echo '<div class="boxed_wrapper">';
+?>

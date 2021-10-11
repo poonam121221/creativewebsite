@@ -39,21 +39,21 @@ function divWidthMenu() {
 	// $('.home1 .container-fix .main-menu').outerWidth(width_count - width_bl - width_br-30);
 }
 function customResponsive(){
-	var window_w = parseInt($(window).width());	
+	// var window_w = parseInt($(window).width());	
 	
 	// $(".group1 #logo img").each(function() {
-        // if( this.complete ) {
-            // divWidthMenu.call( this );
-        // } else {
-            // $(this).one('load', divWidthMenu);
-        // }
+    //     if( this.complete ) {
+    //         divWidthMenu.call( this );
+    //     } else {
+    //         $(this).one('load', divWidthMenu);
+    //     }
     // });
 	
 	// var offsetMargin = 0-$('.wrapper').outerWidth(true)*2.6/100;
 	// $('.home1 .banner7').css('margin-left',offsetMargin);
 	// $('.home1 .banner7').css('margin-right',offsetMargin);
 	
-	$('.search-content').css('top',$('.search-container i').offset().top+50);
+	// $('.search-content').css('top',$('.search-container i').offset().top+50);
 	
 }
 $(window).resize(function() {

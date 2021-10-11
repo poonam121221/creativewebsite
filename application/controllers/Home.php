@@ -21,7 +21,6 @@ class Home extends Frontend_Controller {
 	public function index(){
            
 		$filter = array('is_default'=>1,'page_status'=>1,'is_delete'=>0);
-        $this->data['header_message'] = getMessageBoard(array(),array(),2);
 		$this->data['DataList'] = $this->HomeModel->getSingleList($this->__table,$filter);
 		$condition = array('page_status'=>1,'is_delete'=>0,'page_url'=>'quick-links');
         
@@ -46,7 +45,6 @@ class Home extends Frontend_Controller {
 		
 		$filter = array('page_status'=>1,'is_delete'=>0,'page_url'=>'about-us');
 		$this->data['DataList'] = $this->HomeModel->getSingleList($this->__table,$filter);
-
 		
 		if(isset($this->data['DataList']) && $this->data['DataList']!=FALSE){
 			if(trim($this->data['DataList']->meta_title)!=""){

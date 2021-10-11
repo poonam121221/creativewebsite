@@ -56,49 +56,44 @@ define('HTTP_IMAGES_PATH_ADMIN', $config['base_url'].'webroot/img/');
 define('HTTP_JS_PATH_ADMIN',     $config['base_url'].'webroot/');
 
 define('HTTP_CSS_PATH',    $config['base_url'].'assets/css/');
-define('HTTP_IMAGES_PATH', $config['base_url'].'assets/img/');
+define('HTTP_IMAGES_PATH', $config['base_url'].'assets/images/');
 define('HTTP_JS_PATH', 	   $config['base_url'].'assets/js/');
 
 $config['header_css'] =  array(
-								'assets/css/ocquickview.css',
-								'assets/css/owl.carousel.min.css',
-								'assets/css/owl.theme.green.min.css',
-								'assets/css/jquery.countdown.css',
-								'assets/css/custommenu.css',
-								'assets/css/animate.css',
-								'assets/css/layoutproducts.css',
-                                'assets/css/bootstrap.min.css',
-                                'assets/css/font-awesome.min.css',
-                                'assets/css/ionicons.min.css',
-								'assets/css/stylesheet.css',
-								'assets/css/ocajaxlogin.css',
-								'assets/css/bootstrap-datetimepicker.min.css',
-								'assets/css/ocslideshow.css',
-								'assets/css/ocpagebuilder.css'
+								'assets/css/bootstrap.min.css',
+								'assets/css/bootstrap-select.min.css',
+								'assets/css/jquery.bootstrap-touchspin.css',
+								'assets/css/font-awesome.css',
+								'assets/css/flaticon.css',
+								'assets/css/icomoon.css',
+								'assets/revolution/css/settings.css',
+                                'assets/revolution/css/layers.css',
+                                'assets/revolution/css/navigation.css',
+                                'assets/css/owl.carousel.css',
+								'assets/css/jquery.bxslider.css',
+								'assets/css/flexslider.css',
+								'assets/css/jquery-ui.css',
+								'assets/css/jquery.fancybox.css',
+								'assets/css/polyglot-language-switcher.css',
+								'assets/css/animate.min.css',
+								'assets/css/nouislider.css',
+								'assets/css/nouislider.pips.css',
+								'assets/css/magnific-popup.css',
+								'assets/css/style.css',
+								'assets/css/responsive.css'
                                 );
 								
-$config['header_js']  =  array(
-								'assets/js/jquery-2.1.1.min.js',
-								'assets/js/jquery-ui.min.js',
-								'assets/js/ocquickview.js',
-								'assets/js/owl.carousel.min.js',
-								'assets/js/jquery.elevatezoom.js',
-								'assets/js/jquery.plugin.min.js',
-								'assets/js/jquery.countdown.min.js',
-								'assets/js/custommenu.js',
-								'assets/js/mobile_menu.js',
-								'assets/js/bootstrap.min.js',
-								'assets/js/jquery.bpopup.min.js',
-								'assets/js/jquery.cookie.js',
-								'assets/js/ocajaxlogin.js',
-								'assets/js/moment.min.js',
-								'assets/js/moment-with-locales.min.js',
-								'assets/js/bootstrap-datetimepicker.min.js',
-								'assets/js/jquery.nivo.slider.js',
-								'assets/js/common.js',
-);
+$config['header_js']  =  array();
 
-$config['footer_js']  = array( );
+$config['footer_js']  = array( 
+	'assets/js/jquery.js',
+	'assets/js/bootstrap.min.js',
+	'assets/js/owl.carousel.min.js',
+	'assets/js/jquery.flexslider.js',
+	'assets/revolution/js/jquery.themepunch.tools.min.js',
+	'assets/revolution/js/jquery.themepunch.revolution.min.js',
+	'assets/js/custom.js'
+);
 
 $config['admin_header_css'] = array();
 $config['admin_header_js']  = array('plugins/jquery-3.6.0.min.js');

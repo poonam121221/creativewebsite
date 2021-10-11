@@ -65,11 +65,11 @@ function buildFrontTopMenu($parent, $menu) {
 		
 		if($i == 0){
 			//parent ul
-			$html .= '<ul class="navbar-nav mx-auto">';
+			$html .= '<ul class="navigation clearfix">';
 			$i++;
 		}else{
 			//child ul
-			$html .='<ul class="dropdown-menu">';
+			$html .='<ul class="submenu">';
 		}
 
 
@@ -95,16 +95,16 @@ function buildFrontTopMenu($parent, $menu) {
 
 
                         if($ci->router->fetch_class()=='Home'){
-                             $html .= "<li class='nav-item' id='menu_".$menu['menus'][$menu_id]['id']."'>";
+                             $html .= "<li class='home' id='menu_".$menu['menus'][$menu_id]['id']."'>";
                         }else{
-                             $html .= "<li class='nav-item' id='menu_".$menu['menus'][$menu_id]['id']."'>";
+                             $html .= "<li class='' id='menu_".$menu['menus'][$menu_id]['id']."'>";
                         }
 					   
 					    if($menu['menus'][$menu_id]['tab_same_new']==1){
-						  $html .= "<a  class='nav-link ' title='".stripslashes2($menu['menus'][$menu_id]['menu_name'])."' href='".base_url()."'>".$icon;
+						  $html .= "<a  title='".stripslashes2($menu['menus'][$menu_id]['menu_name'])."' href='".base_url()."'>".$icon;
 						 
 						}else{
-						  $html .= "<a class='nav-link ' title='".stripslashes2($menu['menus'][$menu_id]['menu_name'])."' target='_blank' href='".base_url().$menu['menus'][$menu_id]['controller_name']."'>".$icon;
+						  $html .= "<a title='".stripslashes2($menu['menus'][$menu_id]['menu_name'])."' target='_blank' href='".base_url().$menu['menus'][$menu_id]['controller_name']."'>".$icon;
 						  
 						}
 						if($menu['menus'][$menu_id]['id']==1){}else{
@@ -117,17 +117,17 @@ function buildFrontTopMenu($parent, $menu) {
 
 						
                                             
-					    $html .= "<li id='menu_".$menu['menus'][$menu_id]['id']."' class='nav-item ".$active."' >";
+					    $html .= "<li id='menu_".$menu['menus'][$menu_id]['id']."' class='dropdown".$active."' >";
 					    if($menu['menus'][$menu_id]['page_module_link']==3 && $menu['menus'][$menu_id]['controller_name']=='#'){
-							$html .= "<a class='nav-link ' title='".stripslashes2($menu['menus'][$menu_id]['menu_name'])."' href='javascript:void(0)'>".$icon;
+							$html .= "<a title='".stripslashes2($menu['menus'][$menu_id]['menu_name'])."' href='javascript:void(0)'>".$icon;
                            
 						}else if($menu['menus'][$menu_id]['page_module_link']==3 && $menu['menus'][$menu_id]['controller_name']!='#'){
 							
 							if($menu['menus'][$menu_id]['tab_same_new']==1){
-								$html .= "<a  class='' title='".stripslashes2($menu['menus'][$menu_id]['menu_name'])."' href='".$menu['menus'][$menu_id]['controller_name']."'>".$icon;
+								$html .= "<a title='".stripslashes2($menu['menus'][$menu_id]['menu_name'])."' href='".$menu['menus'][$menu_id]['controller_name']."'>".$icon;
 								
 							}else{
-								$html .= "<a  class='' title='".stripslashes2($menu['menus'][$menu_id]['menu_name'])."' target='_blank' href='".$menu['menus'][$menu_id]['controller_name']."'>".$icon;
+								$html .= "<a title='".stripslashes2($menu['menus'][$menu_id]['menu_name'])."' target='_blank' href='".$menu['menus'][$menu_id]['controller_name']."'>".$icon;
 								
 							}
 							
@@ -137,10 +137,10 @@ function buildFrontTopMenu($parent, $menu) {
 							$html .="</div>";
 						}else{
 							if($menu['menus'][$menu_id]['tab_same_new']==1){
-								$html .= "<a class='' title='".stripslashes2($menu['menus'][$menu_id]['menu_name'])."' href='".base_url().$menu['menus'][$menu_id]['controller_name']."'>".$icon;
+								$html .= "<a title='".stripslashes2($menu['menus'][$menu_id]['menu_name'])."' href='".base_url().$menu['menus'][$menu_id]['controller_name']."'>".$icon;
 								
 							}else{
-								$html .= "<a class='' title='".stripslashes2($menu['menus'][$menu_id]['menu_name'])."' target='_blank' href='".base_url().$menu['menus'][$menu_id]['controller_name']."'>".$icon;
+								$html .= "<a title='".stripslashes2($menu['menus'][$menu_id]['menu_name'])."' target='_blank' href='".base_url().$menu['menus'][$menu_id]['controller_name']."'>".$icon;
 								
 							}
 						}
@@ -160,7 +160,7 @@ function buildFrontTopMenu($parent, $menu) {
 				
 				if($menu['menus'][$menu_id]['p_menu_id']==0){
 					if($menu['menus'][$menu_id]['mega_menu']==0){
-						$switchParentClass = "dropdown";
+						$switchParentClass = "";
 					}else{
 						$switchParentClass = "dropdown";
 					}					
@@ -172,16 +172,16 @@ function buildFrontTopMenu($parent, $menu) {
 				$html .= "<li class='".$switchParentClass."' id='menu_".$menu['menus'][$menu_id]['id']."'>";
 				
 				if($menu['menus'][$menu_id]['page_module_link']==3 && $menu['menus'][$menu_id]['controller_name']=='#'){
-				   $html .= "<a class='dropdown-toggle ' data-toggle='dropdown' title='".stripslashes2($menu['menus'][$menu_id]['menu_name'])."' href='javascript:void(0)'>".$icon;
+				   $html .= "<a  title='".stripslashes2($menu['menus'][$menu_id]['menu_name'])."' href='javascript:void(0)'>".$icon;
 				  
 					
 				}else if($menu['menus'][$menu_id]['page_module_link']==3 && $menu['menus'][$menu_id]['controller_name']!='#'){
 							
 					if($menu['menus'][$menu_id]['tab_same_new']==1){
-						$html .= "<a class='dropdown-toggle ' data-toggle='dropdown' title='".stripslashes2($menu['menus'][$menu_id]['menu_name'])."' href='".$menu['menus'][$menu_id]['controller_name']."'>".$icon;
+						$html .= "<a  title='".stripslashes2($menu['menus'][$menu_id]['menu_name'])."' href='".$menu['menus'][$menu_id]['controller_name']."'>".$icon;
 						
 					}else{
-						$html .= "<a class='dropdown-toggle ' data-toggle='dropdown' title='".stripslashes2($menu['menus'][$menu_id]['menu_name'])."' target='_blank' href='".$menu['menus'][$menu_id]['controller_name']."'>".$icon;
+						$html .= "<a  title='".stripslashes2($menu['menus'][$menu_id]['menu_name'])."' target='_blank' href='".$menu['menus'][$menu_id]['controller_name']."'>".$icon;
 						
 					}
 							
@@ -393,10 +393,10 @@ if ( ! function_exists('buildFrontMiddleMenu')){
 		$query = customFrontMenu(3);
 		
 		if(count($query)>0){
-			$str .= '';
+			$str .= '<ul class="list">';
 			foreach($query as $row){
 				if ($row['p_menu_id']==0) {
-				$str .='<div class="pt_menu"><div class="parentMenu">';
+				$str .='<li>';
 				if(trim($row['controller_name'])!="" && $row['controller_name']!=NULL && trim($row['controller_name'])!="#"){
 				 if($row['page_module_link']==3 && trim($row['controller_name'])!="#"){
 				 	if($row['tab_same_new']==1){
@@ -429,11 +429,11 @@ if ( ! function_exists('buildFrontMiddleMenu')){
 					$str .='<a title="'.html_escape($row['menu_name']).'" href="javascript:void(0)">';
                                         
 				}				
-				$str .='<span>'.html_escape($row['menu_name']).'</span>';
-				$str .='</a></div></div>';
+				$str .= html_escape($row['menu_name']);
+				$str .= '</a></li>';
 				}
 			}
-			$str .= ''.PHP_EOL;
+			$str .= '</ul>'.PHP_EOL;
 			return $str;
 		}else{
 			return "";
@@ -1417,10 +1417,10 @@ if ( ! function_exists('buildTopMenu')){
 		$query = customFrontMenu(1);
 		
 		if(count($query)>0){
-			$str .= '';
+			$str .= '<ul class="navigation clearfix">';
 			foreach($query as $row){
 				if ($row['p_menu_id']==0) {
-				$str .='<div class="pt_menu"><div class="parentMenu">';
+				$str .='<li>';
 				if(trim($row['controller_name'])!="" && $row['controller_name']!=NULL && trim($row['controller_name'])!="#"){
 				 if($row['page_module_link']==3 && trim($row['controller_name'])!="#"){
 				 	if($row['tab_same_new']==1){
@@ -1454,10 +1454,10 @@ if ( ! function_exists('buildTopMenu')){
                                         
 				}				
 				$str .='<span>'.html_escape($row['menu_name']).'</span>';
-				$str .='</a></div></div>';
+				$str .='</a></li>';
 				}
 			}
-			$str .= ''.PHP_EOL;
+			$str .= '</ul>'.PHP_EOL;
 			return $str;
 		}else{
 			return "";
