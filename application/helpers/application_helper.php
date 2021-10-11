@@ -1259,47 +1259,6 @@ if(!function_exists('parseJsonArray')){
 	
 }//end parseJsonArray check is exist or not
 
-if(!function_exists('getMessageBoard')){
-	
-	function getMessageBoard($where_in=array(),$condition=array(),$limit=5){
-		$ci = & get_instance();
-		$col_name ="";
-		
-		$tbl = "comm_messages";
-		
-		if(checkLanguage("english")){
-			$col_name = 'title_en as title, designation_en as designation, message_en as message,';
-		}else{
-			$col_name = 'title_hi as title, designation_hi as designation, message_hi as message,';
-		}
-		
-		$col_name .= 'id,attachment,status';
-
-		$filter = array('status'=>1, 'is_delete'=>0);
-		if(count($condition)>0){
-			foreach($condition as $key=>$val){
-			  $filter[$key] = $val;
-			}
-		}
-		
-		if(count($where_in)>0){
-			$ci->db->where_in('id', $where_in);
-		}
-		
-		$ci->db->select($col_name);
-		$ci->db->limit($limit);
-		$query = $ci->db->get_where($tbl,$filter);
-		$count_rec = count($query->result());
-		
-		if($count_rec>0){			
-			//return ($count_rec>1)?$query->result():$query->row();
-                        return $query->result();
-		}else{
-			return array();
-		}
-	}//end getMessageBoard function
-	
-}//end getMessageBoard function exist
 
 if(!function_exists('getEvent')){
 	
